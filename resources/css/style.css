@@ -1,0 +1,393 @@
+:root {
+  --main: #E7E5E4;
+  --primary: #0F3D5C;
+  --secondary: #E76727;
+  --accent: #57575B;
+  --text: #050316;
+  --lightGray: #D9D9D9;
+  --active: rgba(231, 103, 39, 0.41);
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* custom css */
+
+/* Background Color */
+.tei-bg-primary {
+  background-color: var(--primary);
+}
+
+.tei-bg-secondary {
+  background-color: var(--secondary);
+}
+
+.tei-bg-accent {
+  background-color: var(--accent);
+}
+
+.tei-bg-light {
+  background-color: var(--lightGray) !important;
+}
+
+.tei-bg-active {
+  background-color: var(--active);
+}
+
+.tei-bg-main {
+  background-color: var(--main);
+}
+
+.tei-bg-gradient {
+  background: linear-gradient(90deg, #041e30 0%, #57575B 100%);
+  mix-blend-mode: darken;
+}
+
+/* Background Color */
+
+/* TEXT */
+.tei-text-primary {
+  color: var(--primary);
+}
+
+.tei-text-secondary {
+  color: var(--secondary) !important;
+}
+
+.tei-text-accent {
+  color: var(--accent);
+}
+
+.tei-text-light {
+  color: var(--lightGray);
+}
+
+.tei-text {
+  color: var(--text);
+}
+
+/* END TEXT */
+
+/* BUTTON */
+.tei-btn-primary {
+  background-color: var(--primary);
+  color: #050316;
+}
+
+.tei-btn-primary:hover {
+  background-color: #0f2e44;
+}
+
+.tei-btn-secondary {
+  background-color: var(--secondary);
+  color: #050316;
+}
+
+.tei-btn-secondary:hover {
+  background-color: #ca5f29;
+  color: var(--main);
+}
+
+/* END BUTTON */
+
+/* Border */
+.tei-border-primary {
+  border-color: var(--primary) !important;
+}
+
+.tei-border-primary:focus {
+  border-color: var(--primary) !important;
+}
+
+
+.tei-border-secondary {
+  border-color: var(--secondary) !important;
+}
+
+.tei-focus-secondary:focus {
+  border-color: var(--secondary) !important;
+  --tw-ring-color: var(--secondary) !important;
+}
+
+.tei-focus-border-secondary:focus {
+  border-color: var(--secondary) !important;
+}
+
+.tei-border-accent {
+  border-color: var(--accent) !important;
+}
+
+
+/* END border */
+
+/* Bidding Styles */
+.details-hide {
+  height: 0px;
+  padding-bottom: 0rem;
+  /* display: none; */
+  opacity: 0;
+}
+
+.bidding-details {
+  transition: height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.envelope-details {
+  transition: height 0.5s ease-in-out, padding 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.details-show {
+  height: 174.375px;
+  padding-bottom: 1.2rem;
+  opacity: 1;
+}
+
+.displayNone {
+  display: none !important;
+}
+
+/* End Bidding Styles */
+
+/* Loader */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  background-color: #f7f9fb;
+  transition: opacity 0.75s, visibility 0.75s;
+  z-index: 100;
+}
+
+.loading {
+  --speed-of-animation: 0.9s;
+  --gap: 6px;
+  --first-color: #0F3D5C;
+  --second-color: #E76727;
+  --third-color: #56565A;
+  --fourth-color: #E76727;
+  --fifth-color: #0F3D5C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  gap: 6px;
+  height: 100px;
+}
+
+.loading span {
+  width: 4px;
+  height: 50px;
+  background: var(--first-color);
+  animation: scale var(--speed-of-animation) ease-in-out infinite;
+}
+
+.loading-small {
+  --speed-of-animation: 0.9s;
+  --gap: 6px;
+  --first-color: #0F3D5C;
+  --second-color: #E76727;
+  --third-color: #56565A;
+  --fourth-color: #E76727;
+  --fifth-color: #0F3D5C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  gap: 6px;
+  height: 0px;
+}
+
+.loading-small span {
+  width: 2px;
+  height: 15px;
+  background: var(--first-color);
+  animation: scale var(--speed-of-animation) ease-in-out infinite;
+}
+
+.loading-main span:nth-child(2) {
+  background: var(--second-color);
+  animation-delay: -0.8s;
+}
+
+.loading-main span:nth-child(3) {
+  background: var(--third-color);
+  animation-delay: -0.7s;
+}
+
+.loading-main span:nth-child(4) {
+  background: var(--fourth-color);
+  animation-delay: -0.6s;
+}
+
+.loading-main span:nth-child(5) {
+  background: var(--fifth-color);
+  animation-delay: -0.5s;
+}
+
+.text-color-failed {
+  color: #dc3545;
+
+}
+
+
+@keyframes scale {
+
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.05);
+  }
+
+  20% {
+    transform: scaleY(1);
+  }
+}
+
+/* End Loader */
+
+
+/* SIDEBAR */
+.sub-menu-hide {
+  max-height: 0px;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+.sub-menu {
+  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.sub-menu-show {
+  max-height: 134.375px;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+
+}
+
+#maintenanceMenu .sub-menu-show {
+  max-height: 300.375px;
+}
+
+#envelopeMaintenanceMenu .sub-menu-show {
+  max-height: 178.375px;
+}
+
+#eProcurement .sub-menu-show {
+  max-height: 300.375px;
+}
+
+#biddingMenu .sub-menu-show {
+  max-height: 178.375px;
+}
+
+.menu-hover {
+  transition: 0.3s ease-in-out;
+}
+
+.menu-hover:hover {
+  background-color: var(--active);
+}
+
+.tei-main {
+  transition: margin-left 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.tei-main-open{
+  margin-left: 4rem
+}
+
+.tei-main-close{
+  margin-left: 16rem
+}
+
+.tei-sidebar {
+  transition: width 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.tei-sidebar-show {
+  width: 16rem;
+}
+
+.tei-sidebar-collapse {
+  width: 4rem;
+}
+
+/* END SIDEBAR */
+
+/* Project Bidding */
+.bidding-show {
+  height: 165px;
+  border-width: 1px;
+}
+
+.bidding-hide {
+  height: 0px;
+  border-width: 0px;
+}
+
+.bidding-action-menu {
+  transition: height 0.5s ease-in-out, padding 0.5s ease-in-out, border 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+/* END Project Bidding */
+
+/* Vendor Envelope */
+.up-arrow {
+  transform: rotate(0deg);
+}
+
+.down-arrow {
+  transform: rotate(180deg);
+}
+
+.vendor-content {
+  transition: max-height 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.content-hide {
+  max-height: 0;
+}
+
+.content-show {
+  max-height: 2000px;
+}
+
+/* Vendor Envelope */
+
+/* OTP PAGE STYLE */
+.input {
+  width: 40px;
+  border: none;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.5);
+  margin: 0 10px;
+  text-align: center;
+  cursor: pointer;
+  pointer-events: all;
+  color: var(--primary);
+}
+
+.input:focus {
+  border-bottom: 3px solid var(--primary);
+  outline: none;
+}
+/* OTP PAGE STYLE */
